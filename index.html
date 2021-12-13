@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="EcommerceApp">
+  <head>
+    <meta charset="utf-8" />
+    <title>EcommerceApp</title>
+    <!-- <link rel="icon" href="./views/images/messages1.svg" /> -->
+    <link rel="stylesheet" href="lib/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/middle.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/store.css" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <link rel="stylesheet" href="./css/loginScreen.css" />
+    <link rel="stylesheet" href="app.css" />
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!-- <script src="lib/angular/angular_locale-pt-br.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js"></script>
+    <!-- <script src="../node_modules/angular-route/angular-route.js"></script> -->
+    <script src="app.js"></script>
+    <script src="./js/config/routes.js"></script>
+    <!-- <script src="./js/config/routesDashboard.js"></script> -->
+    <script src="./js/constants/consts.js"></script>
+
+    <!-- <script src="./js/components/headerCtrl.js"></script> -->
+    <!-- <script src="./js/components/middleCtrl.js"></script> -->
+    <!-- <script src="./js/components/footerCtrl.js"></script> -->
+    <script src="./js/components/login/loginCtrl.js"></script>
+    <script src="./js/components/login/registerCtrl.js"></script>
+    <script src="./js/components/template/headerComp.js"></script>
+    <script src="./js/components/template/sidebarComp.js"></script>
+    <script src="./js/controller/authController.js"></script>
+    <script src="./js/controller/storeController.js"></script>
+    <script src="./js/controller/homeController.js"></script>
+    <script src="./js/controller/sidebar.Controller.js"></script>
+    <script src="./js/Factory/handleResponseErrorFactory.js"></script>
+    <script src="./js/Factory/authFactory.js"></script>
+    <script src="./js/Factory/msgsFactory.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.2.1/angular-material.min.js"></script>
+    <!-- <script src="https://gist.github.com/antoniopresto/d73888dab087ae35a7cf41a61d8a3cbc.js"></script> -->
+  </head>
+  <body>
+    <div ng-view></div>
+    </div>
+  </body>
+</html>
