@@ -1,0 +1,69 @@
+<section class="sidebar__section">
+  <div class="sidebar__list">
+    <div class="sidebar__buttons">
+      <a class="sidebar__btn" ui-sref="dashboard">
+        <p class="sidebar__icon">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </p>
+        <p class="sidebar__p">FINALIZAR PEDIDO</p>
+      </a>
+      <a class="sidebar__btn" ui-sref="bank">
+        <p class="sidebar__icon"></p>
+        <p class="sidebar__p"></p>
+      </a>
+      <a class="sidebar__btn" ui-sref="historic">
+        <p class="sidebar__icon"><i class="fa fa-sun-o icon__default"></i></p>
+        <p class="sidebar__p">{{totalValue}}</p>
+      </a>
+    </div>
+    <div class="sidebar__highlighted"></div>
+    <div class="sidebar__buttons bottom" ng-controller="sideCtrl">
+      <a class="sidebar__btn" ui-sref="adm">
+        <p class="sidebar__icon">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </p>
+        <p class="sidebar__p">ENDEREÇOS</p>
+      </a>
+      <a
+        class="sidebar__btn"
+        ui-sref="nubank"
+        ng-repeat="address in addressInfo"
+      >
+        <p class="sidebar__icon">
+          <i class="fa fa-caret-right icon__default"></i>
+        </p>
+        <p class="sidebar__p">{{address.address}}, {{address.city}}</p>
+      </a>
+      <a class="sidebar__btn" ui-sref="adm">
+        <p class="sidebar__icon">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </p>
+        <p class="sidebar__p">NOVO ENDEREÇO</p>
+      </a>
+    </div>
+
+    <div class="sidebar__buttons bottom" ng-controller="sideCtrl">
+      <a class="sidebar__btn" ui-sref="adm">
+        <p class="sidebar__icon">
+          <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+        </p>
+        <p class="sidebar__p">PAGAMENTO</p>
+      </a>
+      <a
+        class="sidebar__btn"
+        ui-sref="nubank"
+        ng-repeat="payment in addressInfo"
+      >
+        <p class="sidebar__icon">
+          <i class="fa fa-caret-right icon__default"></i>
+        </p>
+        <p class="sidebar__p">{{payment.payment_type}}</p>
+      </a>
+    </div>
+    <a class="sidebar__btn" ui-sref="adm">
+      <button class="sidebar__btn__default">
+        FAZER PEDIDO <i class="fa fa-check-square-o" aria-hidden="true"></i>
+      </button>
+    </a>
+  </div>
+</section>

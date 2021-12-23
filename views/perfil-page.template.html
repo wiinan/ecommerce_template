@@ -1,0 +1,69 @@
+<link href="../css/template/header-store.css" rel="stylesheet" />
+<header-component></header-component>
+
+<section class="perfil__section">
+  <div class="perfil__default__container">
+    <i class="fa fa-user-circle" aria-hidden="true"></i>
+    <h2 class="perfil__name">Wiinan</h2>
+  </div>
+  <div class="perfil__default__container">
+    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+    <p class="perfil__email">wiinan@email.com</p>
+  </div>
+  <div class="perfil__container__flex">
+    <a href="#!/my-announcement" class="perfil__container__announcement">
+      <p class="perfil__name__announcement">
+        <i class="fa fa-car" aria-hidden="true"></i> ANUNCIOS
+      </p>
+      <div class="perfil__repeat">
+        <div class="perfil__announcement__flex">
+          <div
+            class="perfil__announcement__container"
+            ng-repeat="car in announcement"
+            ng-hide="announcement.length === 0"
+          >
+            <img class="perfil__car__img" src="{{car.image_url}}" />
+            <p class="perfil__name__car">{{car.spec.name}} {{car.name}}</p>
+          </div>
+          <div
+            onclick="window.location.href = '#!/car'"
+            class="perfil__show"
+            ng-show="announcement.length === 0"
+          >
+            <div class="perfil__show__center">
+              <h1>ANUNCIE AQUI</h1>
+              <p>NADA ANUNCIADO</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="#!/cart" class="perfil__container__announcement">
+      <p class="perfil__name__announcement">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i> CARRINHO
+      </p>
+      <div class="perfil__repeat">
+        <div class="perfil__announcement__flex">
+          <div
+            ng-hide="cartDatas.length === 0"
+            class="perfil__announcement__container"
+            ng-repeat="cart in cartDatas"
+          >
+            <img class="perfil__car__img" src="{{cart.image_url}}" />
+            <p class="perfil__name__car">{{cart.spec.name}} {{cart.name}}</p>
+          </div>
+          <div
+            onclick="window.location.href = '#!/store'"
+            class="perfil__show"
+            ng-show="cartDatas.length === 0"
+          >
+            <div class="perfil__show__center">
+              <h1>CARRINHO VAZIO</h1>
+              <p>VISITAR LOJA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>

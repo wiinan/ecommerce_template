@@ -1,0 +1,45 @@
+<section class="cart__section">
+  <sidebar-cart-component></sidebar-cart-component>
+  <div class="cart__content__items">
+    <div class="cart__p__container">
+      <h1 class="cart__h1">CARRINHO</h1>
+    </div>
+    <div class="cart__box" ng-repeat="car in cartDatas">
+      <a ng-href="#!/car/{{car.products_id}}" class="cart__box__center">
+        <div class="cart__absolute">
+          <button
+            ng-click="removeToCart(car.products_id)"
+            class="cart__button__deleted"
+          >
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          </button>
+        </div>
+        <img class="cart__image" src="{{car.product.image_url}}" />
+        <div class="cart__infos">
+          <p class="cart__infos__text">Nome: {{car.product.name}}</p>
+        </div>
+        <div class="cart__infos">
+          <p class="cart__infos__text">Price: {{car.product.price}}</p>
+        </div>
+        <div class="cart__infos">
+          <div class="cart__infos__flex">
+            <i
+              class="fa fa-minus cart__mini__icon__minus"
+              aria-hidden="true"
+            ></i>
+            <p class="cart__infos__text">Quantidade: {{car.quantity}}</p>
+            <i class="fa fa-plus cart__mini__icon__plus" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="cart__infos">
+          <p class="cart__infos__text">
+            Descrição: {{car.product.description}}
+          </p>
+        </div>
+        <div class="cart__infos">
+          <p class="cart__price">Price: {{car.product.price}} R$</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

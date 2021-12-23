@@ -1,0 +1,105 @@
+<link href="../css/template/header-store.css" rel="stylesheet" />
+<header-component></header-component>
+<form>
+  <section class="section__login">
+    <div class="login__container__box">
+      <div class="login__box">
+        <h3 class="login__subtitle">EDITAR O ANUNCIO</h3>
+      </div>
+      <div class="login__box__flex">
+        <div class="login__register__box">
+          <div class="register__box">
+            <input
+              class="register__input-password"
+              placeholder="{{carId[0].name}}"
+              value="{{carId[0].name}}"
+              id="authPassword"
+              type="text"
+              ng-model="formCar.name"
+            />
+            <input
+              class="register__input-password"
+              placeholder="{{carId[0].spec.name}}"
+              value="{{carId[0].spec.name}}"
+              id="authPassword"
+              type="text"
+              ng-model="defaultValue.spec_id"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+      <div class="login__box__flex">
+        <div class="login__register__box">
+          <div class="register__box">
+            <input
+              class="register__input-password"
+              placeholder="{{carId[0].slug}}"
+              value="{{carId[0].slug}}"
+              id="authPassword"
+              type="text"
+              ng-model="defaultValue.slug"
+              disabled
+            />
+            <input
+              class="register__input-password"
+              placeholder="{{carId[0].image_url}}"
+              value="{{carId[0].image_url}}"
+              id="authPassword"
+              type="text"
+              ng-model="formCar.image_url"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="login__box__flex">
+        <div class="login__register__box">
+          <div class="register__box">
+            <input
+              class="register__input-password"
+              placeholder="{{carId[0].rating}}"
+              id="authPassword"
+              type="text"
+              ng-model="formCar.rating"
+              disabled
+            />
+            <input
+              class="register__input-password"
+              placeholder="{{carId[0].count_in_stock}}"
+              id="authPassword"
+              type="number"
+              ng-model="formCar.countinstock"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="login__box__flex">
+        <div class="login__register__box">
+          <div class="register__box">
+            <input
+              class="register__input-password"
+              placeholder="{{carId[0].description}}"
+              id="authPassword"
+              type="text"
+              ng-model="formCar.description"
+            />
+            <input
+              class="register__input-password"
+              placeholder="{{carId[0].price}}"
+              id="authPassword"
+              ng-model="formCar.price"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="login__box__buttons">
+        <input
+          type="submit"
+          value="ANUNCIAR"
+          class="button-submit"
+          ng-click="editCar(carId[0].id)"
+        />
+      </div>
+    </div>
+  </section>
+</form>

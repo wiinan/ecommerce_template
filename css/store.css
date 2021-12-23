@@ -1,0 +1,222 @@
+.store__section {
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+}
+
+.store__flex__box {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10rem;
+}
+
+.store__content__items {
+  padding-top: 5rem;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.store__h1 {
+  font-size: 8rem;
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.store__text h2 {
+  font-size: 4rem;
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb19f 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  user-select: none;
+}
+
+.store__text h3 {
+  font-size: 3rem;
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb19f 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  user-select: none;
+  padding-bottom: 1rem;
+}
+
+.store__infos {
+  width: 60rem;
+  background-color: rgb(66, 0, 55);
+  box-shadow: 0 1px 0 1px #131313;
+  color: white;
+  margin-left: 15rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.store__infos:hover {
+  background-color: #131313;
+  box-shadow: 0 1px 0 1px #131313;
+}
+
+.store__infos__text {
+  text-transform: uppercase;
+  padding: 3rem;
+}
+
+.store__infos__lowercase {
+  text-transform: lowercase;
+  padding: 3rem;
+}
+
+.store__price {
+  text-transform: uppercase;
+  padding: 2rem;
+  cursor: pointer;
+  background-color: rgb(13, 187, 36);
+  box-shadow: 0 1px 0 1px #131313;
+  margin-top: 1rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  color: rgb(66, 0, 55);
+  transition: 0.3s;
+}
+
+.store__price:hover {
+  text-transform: uppercase;
+  background-color: rgb(8, 238, 38);
+  color: rgb(0, 0, 0);
+}
+
+.store__container__search {
+  margin-bottom: 5rem;
+}
+
+.store__flex__search {
+  width: 960px;
+  height: 45px;
+  background-color: rgb(116, 8, 116);
+  color: white;
+  padding-left: 10px;
+  outline: none;
+  border: 2px solid rgba(112, 30, 99, 0.849);
+  font-size: 16px;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.store__flex__search::placeholder {
+  color: rgb(196, 192, 192);
+}
+
+.store__flex__search:focus {
+  border: 2.5px solid rgba(204, 8, 171, 0.849);
+  background-color: rgba(204, 8, 171, 0.849);
+}
+
+.store__p__container {
+  padding-bottom: 5rem;
+  width: 100rem;
+  align-items: center;
+  justify-content: center;
+  margin-left: 46rem;
+}
+
+.store__p {
+  font-size: 3.5rem;
+}
+
+.store__box {
+  position: relative;
+  width: 1540px;
+  height: 500px;
+  background-color: rgb(39, 39, 39);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  transition: 0.5s;
+  margin-bottom: 5rem;
+}
+
+.store__box:hover {
+  position: relative;
+  box-shadow: 0 25px 45px rgba(204, 8, 171, 0.849);
+  background-color: rgb(116, 8, 116);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 2px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.store__box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.075);
+  pointer-events: none;
+  transform: skewX(-15deg);
+}
+
+.store__box__center {
+  margin: 5rem;
+  margin-top: 5rem;
+  border-radius: 5px;
+  display: flex;
+  z-index: 777;
+}
+
+.store__image {
+  background-color: rgb(85, 0, 71);
+  box-shadow: 0 1px 0 1px #131313;
+  padding: 1rem;
+  width: 450px;
+  border-radius: 1rem;
+  height: 400px;
+  transition: 0.5s;
+}
+
+.store__image:hover {
+  transform: scale(1.1);
+}
+
+.store__add__cart {
+  padding-left: 10rem;
+}
+
+.store__button__add {
+  color: green;
+  background-color: transparent;
+  border: 2.3px green solid;
+  padding: 2rem;
+  font-size: 20px;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.store__button__add:hover {
+  color: white;
+  background-color: green;
+  border: 2px rgb(255, 255, 255) solid;
+  transform: scale(1.02);
+  text-shadow: 0 5px 0 5px #131313;
+
+}

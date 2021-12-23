@@ -1,0 +1,105 @@
+<form>
+  <section class="section__login">
+    <div class="login__container__box">
+      <div class="login__box">
+        <h3 class="login__subtitle">ANUCIAR CARRO</h3>
+      </div>
+
+      <div class="login__box__flex">
+        <div class="login__register__box">
+          <div class="register__box">
+            <input
+              class="register__input-password"
+              placeholder="Nome do Veiculo"
+              id="authPassword"
+              type="text"
+              ng-model="formCar.name"
+              required
+            />
+            <input
+              class="register__input-password"
+              placeholder="Marca do Veiculo"
+              id="authPassword"
+              type="text"
+              ng-model="formCar.spec_id"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <div class="login__box__flex">
+        <div class="login__register__box">
+          <div class="register__box">
+            <input
+              class="register__input-password"
+              placeholder="Slug"
+              id="authPassword"
+              type="text"
+              ng-model="formCar.slug"
+            />
+            <input
+              class="register__input-password"
+              placeholder="Imagem Url"
+              id="authPassword"
+              type="text"
+              ng-model="formCar.image_url"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <div class="login__box__flex">
+        <div class="login__register__box">
+          <div class="register__box">
+            <input
+              class="register__input-password"
+              placeholder="rating"
+              id="authPassword"
+              type="text"
+              ng-model="formCar.rating"
+              disabled
+            />
+            <input
+              class="register__input-password"
+              placeholder="Quantos em Stock"
+              id="authPassword"
+              type="number"
+              ng-model="formCar.countinstock"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <div class="login__box__flex">
+        <div class="login__register__box">
+          <div class="register__box">
+            <input
+              class="register__input-password"
+              placeholder="Descrição"
+              id="authPassword"
+              type="text"
+              ng-model="formCar.description"
+              required
+            />
+            <input
+              class="register__input-password"
+              placeholder="Preço"
+              id="authPassword"
+              ng-model="formCar.price"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <div class="login__box__buttons">
+        <input
+          ng-disabled="!formCar.name && !formCar.spec_id && !formCar.image && !formCar.description && !formCar.price"
+          type="submit"
+          value="ANUNCIAR"
+          class="button-submit"
+          ng-click="registerCar()"
+        />
+      </div>
+    </div>
+  </section>
+</form>

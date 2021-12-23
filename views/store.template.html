@@ -1,0 +1,40 @@
+
+<section class="store__section">
+<sidebar-component></sidebar-component>
+				<div class="store__content__items">
+					<div class="store__p__container">
+						<h1 class="store__h1">
+							CATALOGO
+						</h1>
+					</div>
+					<div class="store__container__search">
+						<input placeholder="Pesquisar Carro..." class="store__flex__search" ng-model="searchCar.name" ng-model-options="{debounce: 1000}">
+					</div>
+					<div class="store__flex__box">
+						<div class="store__box" ng-repeat="car in allProducts | filter:searchCar">
+							<a ng-href="#!/store/{{car.id}}" class="store__box__center">
+								<img class="store__image" src={{car.image_url}} />
+								<div class="store__box__content">
+									<div class="store__infos">
+										<p  class="store__infos__text">Marca: {{car.spec.name}}</p>
+									</div>
+									<div class="store__infos">
+										<p class="store__infos__text">Nome: {{car.name}}</p>
+									</div>
+									<div class="store__infos">
+										<p class="store__infos__lowercase">Contato: {{car.user.email}}</p>
+									</div>
+									<div class="store__infos">
+										<p class="store__infos__text">Data: {{car.created_at | date:"dd-MM-yyyy"}}</p>
+									</div>
+									<div class="store__infos">
+										<p class="store__price">Preço: {{car.price}} R$</p>
+									</div>
+								</div>
+								<div class="store__add__cart">
+									<button ng-click="addToCart(car.id)" class="store__button__add"><i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+								</div>
+							</a>
+						</div>
+					</div>
+</section>

@@ -1,0 +1,74 @@
+<link href="../css/template/header-store.css" rel="stylesheet" />
+
+<header-component></header-component>
+<form>
+  <section class="section__login">
+    <div class="login__container__box">
+      <div class="login__box">
+        <h3 class="login__subtitle">CRIAR CONTA</h3>
+      </div>
+      <div class="login__box">
+        <input
+          class="input-password"
+          placeholder="Nome"
+          id="authEmail"
+          type="input"
+          ng-model="formLogin.name"
+          required
+        />
+      </div>
+
+      <div class="login__box">
+        <div class="validate">
+          <input
+            class="input-email"
+            placeholder="Email"
+            id="authEmail"
+            type="input"
+            ng-model="formLogin.email"
+            required
+          />
+          <span><i class="bx bx-x"></i></span>
+        </div>
+      </div>
+      <div class="login__box__flex">
+        <div class="login__register__box">
+          <div class="register__box">
+            <input
+              class="register__input-password"
+              placeholder="Senha"
+              id="authPassword"
+              type="password"
+              ng-model="formLogin.password"
+              required
+            />
+            <input
+              class="register__input-password"
+              placeholder="Confirmar a Senha"
+              id="authPassword"
+              type="password"
+              ng-model="formLogin.confirmPassword"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <div class="login__box__buttons">
+        <input
+          ng-disabled="!formLogin.email && !formLogin.password && !formLogin.confirmPassword"
+          type="submit"
+          value="Entrar"
+          class="button-submit"
+          ng-click="signup()"
+        />
+      </div>
+      <div class="login__box__buttons">
+        <a class="button-submit__secondary" ng-href="#!/login">Logar-se</a>
+      </div>
+    </div>
+
+    <!-- <a href="http://127.0.0.1:3000/api/auth/google" class="btn btn-danger"
+      ><span class="fa fa-google"></span> SignIn with Google</a
+    > -->
+  </section>
+</form>
