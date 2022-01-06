@@ -1,0 +1,82 @@
+<link href="../css/template/header-home.css" rel="stylesheet" />
+<header-component></header-component>
+<section class="middle__video__section">
+  <div class="middle__container">
+    <video class="middle__video" muted autoplay loop id="myVideo">
+      <source src="../views/images/NIGHTSweb.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="middle__overlay"></div>
+  <div class="middle__text">
+    <h1 class="middle__h1">
+      <i class="fa fa-paypal middle__icon" aria-hidden="true"></i>STORE
+    </h1>
+    <h2>Entre Agora</h2>
+    <h3>Compre e Venda os melhores Carros Aqui!</h3>
+    <a ng-href="#!/store" class="middle__a">CATALOGO</a>
+    <div class="middle__container__items">
+      <div class="middle__title">
+        <p class="middle__h2">Escolha Sua marca e Explore</p>
+      </div>
+      <div class="middle__content__items">
+        <div class="middle__p__container">
+          <p class="middle__h2">
+            Veja a lista completa de carros dos sonhos que você vai poder forçar
+            além dos limites.
+          </p>
+        </div>
+        <div ng-click="location('store')" class="middle__flex__box">
+          <div class="middle__box">
+            <div class="middle__box__center">
+              <img class="middle__image" src="./views/images/car (3).png" />
+              <p class="middle__infos">Marca: BMW</p>
+              <p class="middle__infos">Nome: M3-GTR</p>
+              <p class="middle__price">Preço: 50.000,00 R$</p>
+            </div>
+          </div>
+          <div ng-click="location('store')" class="middle__box">
+            <div class="middle__box__center">
+              <img class="middle__image" src="./views/images/car (6).png" />
+              <p class="middle__infos">Marca: TOYOTA</p>
+              <p class="middle__infos">Nome: COROLA</p>
+              <p class="middle__price">Preço: 10.000,00 R$</p>
+            </div>
+          </div>
+          <div ng-click="location('store')" class="middle__box">
+            <div class="middle__box__center">
+              <img class="middle__image" src="./views/images/car (4).png" />
+              <p class="middle__infos">Marca: NISSAN</p>
+              <p class="middle__infos">Nome: GTR R35</p>
+              <p class="middle__price">Preço: 100.000,00 R$</p>
+            </div>
+          </div>
+          <div ng-click="location('store')" class="middle__box">
+            <div class="middle__box__center">
+              <img class="middle__image" src="./views/images/car (10).png" />
+              <p class="middle__infos">Marca: CHEVROLET</p>
+              <p class="middle__infos">Nome: cobalt</p>
+              <p class="middle__price">Preço: 2.000,00 R$</p>
+            </div>
+          </div>
+          <div ng-click="location('store')" class="middle__box">
+            <div class="middle__box__center">
+              <img class="middle__image" src="./views/images/car (7).png" />
+              <p class="middle__infos">Marca: TOYOTA</p>
+              <p class="middle__infos">Nome: supra</p>
+              <p class="middle__price">Preço: 45.000,00 R$</p>
+            </div>
+          </div>
+          <div ng-click="location('store')" class="middle__box">
+            <div class="middle__box__center">
+              <img class="middle__image" src="./views/images/car (9).png" />
+              <p class="middle__infos">Marca: ford</p>
+              <p class="middle__infos">Nome: mustang</p>
+              <p class="middle__price">Preço: 20.000,00 R$</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer-component></footer-component>
+    </div>
+  </div>
+</section>

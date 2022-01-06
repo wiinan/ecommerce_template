@@ -1,0 +1,149 @@
+.order__section {
+  width: 100%;
+  height: 80vh;
+}
+
+.order__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order__title {
+  font-size: 8rem;
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.order__title__h2 {
+  font-size: 3rem;
+  color: white;
+}
+
+.order__title__p {
+  font-size: 1.5rem;
+  padding-right: 17.5rem;
+  color: white;
+}
+
+.order__title__txt {
+  font-size: 2rem;
+  padding-right: 1rem;
+  color: white;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.order__container__info {
+  border: 3px solid white;
+  margin: 5rem 35rem;
+  height: auto;
+}
+
+.order__container__all__info {
+  display: flex;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.order__info {
+  padding-bottom: 3rem;
+  margin: 3rem 10rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-bottom: 2px solid white;
+}
+
+.order__all__info {
+  padding: 5rem;
+  margin: 5rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.order__all__info:hover {
+  background-color: #ff21cf;
+}
+
+.order__info__title__p {
+  font-size: 1.5rem;
+  padding-right: 8rem;
+  color: white;
+  width: 15rem;
+}
+
+.order__info__title__txt {
+  width: 15rem;
+}
+
+.order__title__all__txt__id {
+  font-size: 1.1rem;
+  padding-right: 1rem;
+  color: white;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.order__title__all__txt {
+  font-size: 2rem;
+  padding-right: 1rem;
+  color: white;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.order__info__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid white;
+}
+
+.order__footer {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.order__button {
+  padding: 1rem 3rem 1rem 3rem;
+  color: rgb(255, 5, 234);
+  background-color: transparent;
+  border: 0.3rem solid rgb(255, 5, 234);
+  border-radius: 1rem;
+  transition: 0.25s;
+}
+
+.order__button:hover {
+  background-color: rgb(255, 5, 234);
+  color: white;
+  box-shadow: 0 0.5em 0.5em -0.4em rgb(241, 7, 230);
+  transform: translateY(-0.25em);
+  animation: pulse;
+}
+
+.order__error {
+  color: red;
+}
+
+.order__link__pointer {
+  cursor: pointer;
+  color: rgb(255, 5, 234);
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.order__link__pointer:hover {
+  cursor: pointer;
+  color: rgb(192, 7, 177);
+}

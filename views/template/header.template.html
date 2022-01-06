@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="./css/header.css" />
+
+<section ng-controller="LoginCtrl" class="header__section">
+  <div class="header__flex__control">
+    <div class="header__right__section">
+      <div class="header__logo">
+        <i class="fa fa-paypal header__icon" aria-hidden="true"></i>
+        <h1
+          onclick="window.location.href = '#!/home'"
+          class="header__logo__text"
+        >
+          PCSTOREđ
+        </h1>
+      </div>
+    </div>
+    <div class="header__left__section">
+      <div class="header__list">
+        <a class="header__list__a" ng-href="#!/home">HOME</a>
+        <a class="header__list__a" ng-href="#!/store">LOJA</a>
+        <a ng-if="!haveUser" class="header__list__a" ng-href="#!/store"
+          >MODELOS</a
+        >
+        <a ng-show="haveUser" class="header__list__a" href="#!/car">ANUNCIAR</a>
+        <div ng-if="!haveUser">
+          <button
+            onclick="window.location.href = '#!/login'"
+            class="header__list__button"
+          >
+            LOGIN
+          </button>
+        </div>
+        <div ng-show="haveUser">
+          <button ng-click="toggleModal()" class="header__list__button__logged">
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div ng-show="showModal" class="header__modal__container">
+            <div class="header__modal__section"><button class="header__modal__button__logout" ng-click="toggleModal()">X</button>
+          <div class="header__modal__buttons">
+            <div ng-controller="HomeCtrl" class="header__modal__sigle"><button class="header__modal__button__list" onclick="window.location.href = '#!/profile'"><i class="fa fa-usd" aria-hidden="true"></i> Saldo: {{money}}</button>
+            <div class="header__modal__sigle"><button class="header__modal__button__list" onclick="window.location.href = '#!/profile'"><i class="fa fa-user" aria-hidden="true"></i> PERFIL</button>
+            <div class="header__modal__sigle"><button class="header__modal__button__list" onclick="window.location.href = '#!/my-announcement'"><i class="fa fa-car" aria-hidden="true"></i> MEUS ANUNCIOS</button>
+            <div class="header__modal__sigle"><button class="header__modal__button__list" onclick="window.location.href = '#!/cart'"><i class="fa fa-shopping-cart" aria-hidden="true"></i> CARRINHO</button>
+            <div class="header__modal__sigle"><button class="header__modal__button__list" ng-click="quit()"><i class="fa fa-sign-out" aria-hidden="true"></i> LOGOUT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

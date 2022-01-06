@@ -1,0 +1,85 @@
+<link href="../css/template/header-store.css" rel="stylesheet" />
+<header-component></header-component>
+<form>
+  <section class="section__login">
+    <div class="login__container__box">
+      <div class="login__box">
+        <h3 class="login__subtitle">EDITAR O ANUNCIO</h3>
+      </div>
+      <div class="login__box__flex">
+        <div class="login__register__box">
+          <div class="register__box">
+            <input
+              class="register__input-password"
+              placeholder="{{carId.name}}"
+              value="{{carId.name}}"
+              type="text"
+              ng-model="formCar.name"
+            />
+            <input
+              class="register__input-password"
+              placeholder="{{carId.spec.name}}"
+              value="{{carId.spec.name}}"
+              type="text"
+              ng-model="carId.spec_id"
+              disabled
+            />
+          </div>
+        </div>
+      </div>
+      <div class="login__box__flex">
+        <div class="login__register__box">
+          <div class="register__box">
+            <input
+              class="register__input-password"
+              placeholder="{{carId.slug}}"
+              value="{{carId.slug}}"
+              type="text"
+              ng-model="defaultValue.slug"
+              disabled
+            />
+            <input
+              class="register__input-password"
+              placeholder="{{carId.count_in_stock}}"
+              type="number"
+              ng-model="formCar.countinstock"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="login__box__flex">
+        <div class="login__register__box">
+          <div class="register__box">
+            <input
+              class="register__input-password"
+              placeholder="{{carId.description}}"
+              type="text"
+              ng-model="formCar.description"
+            />
+            <input
+              class="register__input-password"
+              placeholder="{{carId.priceFormat}}"
+              ng-model="formCar.price"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="login__box__buttons">
+        <input
+          type="submit"
+          value="Confirmar"
+          class="button-submit"
+          ng-click="editCar(carId.id)"
+        />
+      </div>
+      <div class="login__box__buttons">
+        <input
+          type="button"
+          value="Voltar"
+          class="button-submit__secondary__edit"
+          ng-click="location('#!/profile')"
+        />
+      </div>
+    </div>
+  </section>
+</form>

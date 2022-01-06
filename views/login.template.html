@@ -1,0 +1,57 @@
+<link href="../css/template/header-store.css" rel="stylesheet" />
+
+<header-component></header-component>
+<form>
+  <section class="section__login">
+    <div class="login__container__box">
+      <div class="login__box">
+        <h1 class="login__title">LOGIN</h1>
+      </div>
+      <div class="login__box">
+        <h3 class="login__subtitle">Insira suas credenciais</h3>
+      </div>
+      <div class="login__box">
+        <div class="validate">
+          <input
+            class="input-email"
+            id="authEmail"
+            ng-keyup="EmailIsValid()"
+            type="input"
+            placeholder="Email"
+            ng-model="formLogin.email"
+            required
+          />
+          <span><i class="bx bx-x"></i></span>
+        </div>
+      </div>
+      <div class="login__box">
+        <input
+          class="input-password"
+          placeholder="Senha"
+          id="authPassword"
+          type="password"
+          ng-model="formLogin.password"
+          required
+        />
+      </div>
+      <div class="login__box__buttons">
+        <input
+          ng-disabled="!formLogin.email && !formLogin.password"
+          type="submit"
+          value="Entrar"
+          class="button-submit"
+          ng-click="login()"
+        />
+      </div>
+      <div class="login__register__container">
+        <div class="login__box__buttons">
+          <p class="login__link__p">Não Possui Conta?</p>
+          <a ng-href="#!/signup" class="link-submit"> Registrar-se</a>
+          <button ng-click="googleAuth()" class="btn btn-danger link-google">
+            <span class="fa fa-google"></span> Entrar com o Google
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</form>

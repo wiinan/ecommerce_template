@@ -1,0 +1,49 @@
+<link href="../css/template/header-store.css" rel="stylesheet" />
+<header-component></header-component>
+
+<section class="details__section">
+  <div class="details__container">
+    <div class="details__flex">
+      <div class="details__img__container">
+        <div class="details__container__img">
+          <img class="details__img" src="{{carId.image.url}}" />
+        </div>
+      </div>
+      <div class="details__section__info">
+        <div class="details__info__text">
+          <div class="details__text__container">
+            <p class="details__text__p__props">Nome</p>
+            <p class="details__text__p__result">{{carId.name}}</p>
+          </div>
+          <div class="details__text__container">
+            <p class="details__text__p__props">Marca</p>
+            <p class="details__text__p__result">{{carId.spec.name}}</p>
+          </div>
+          <div class="details__text__container">
+            <p class="details__text__p__props">Avaliações</p>
+            <p class="details__text__p__result">{{carId.rating}}</p>
+          </div>
+          <div class="details__text__container">
+            <p class="details__text__p__props">Anunciador</p>
+            <p class="details__text__p__result">{{carId.user.name}}</p>
+          </div>
+          <div class="details__text__container">
+            <p class="details__text__p__props">Contato</p>
+            <p class="details__text__p__result">{{carId.user.email}}</p>
+          </div>
+          <div class="details__text__container">
+            <p class="details__text__p__props">Preço</p>
+            <p class="details__text__p__result">{{formCar.price}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="details__button__container">
+      <button class="details__buy__button header__list__button">Comprar</button>
+      <button class="details__add__button" ng-click="addToCart(carId.id)">Adicionar ao Carrinho</button>
+    </div>
+    <div class="details__description__container">
+      <p class="details__buy__button">{{carId.description}}</p>
+    </div>
+  </div>
+</section>

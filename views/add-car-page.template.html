@@ -1,0 +1,88 @@
+<form>
+  <section class="section__login">
+    <div class="login__container__box">
+      <div class="login__box">
+        <h3 class="login__subtitle">ANUCIAR CARRO</h3>
+      </div>
+
+      <div class="login__box__flex">
+        <div class="login__register__box">
+          <div class="register__box">
+            <input
+              class="register__input-password"
+              placeholder="Nome do Veiculo"
+              type="text"
+              ng-model="formCar.name"
+              required
+            />
+            <input
+              class="register__input-password"
+              placeholder="Marca do Veiculo"
+              type="text"
+              ng-model="formCar.spec_id"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <div class="login__box__flex">
+        <div class="login__register__box">
+          <div class="register__box">
+            <input
+              class="register__input-password"
+              placeholder="rating"
+              type="text"
+              ng-model="formCar.rating"
+              disabled
+            />
+            <input
+              class="register__input-password"
+              placeholder="Quantos Disponivel"
+              type="number"
+              min="1"
+              ng-model="formCar.countinstock"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <div class="login__box__flex">
+        <div class="login__register__box">
+          <div class="register__box">
+            <input
+              class="register__input-password"
+              placeholder="Descrição"
+              type="text"
+              ng-model="formCar.description"
+              required
+            />
+            <input
+              class="register__input-password"
+              placeholder="Preço"
+              min="1"
+              ng-model="formCar.price"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <div class="login__box__buttons">
+        <input
+          ng-disabled="!formCar.name && !formCar.spec_id && !formCar.image && !formCar.description && !formCar.price"
+          type="submit"
+          value="ANUNCIAR"
+          class="button-submit"
+          ng-click="registerCar()"
+        />
+      </div>
+      <div class="login__box__buttons">
+        <input
+          type="button"
+          value="RETORNAR"
+          class="button-submit__secondary"
+          onclick="window.location.href = '#!/store'"
+        />
+      </div>
+    </div>
+  </section>
+</form>

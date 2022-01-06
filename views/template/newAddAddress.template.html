@@ -1,0 +1,31 @@
+
+
+<div class="content">
+  <div ng-controller="addAddressCtrl" class="home__content__list">
+    <div class="home__price container">
+      <div class="home__price__value">
+        <i class="fa fa-credit-card home__default__blue"></i>{{ showCredits |
+        number:2 || 0}}R$
+      </div>
+      <p class="home__default__blue">Total de Debitos</p>
+    </div>
+  </div>
+  <div class="home__content__list">
+    <div class="home__price container">
+      <div class="home__price__value">
+        <i class="fa fa-eraser home__default__danger"></i>{{ ShowDebits |
+        number:2 || 0}}R$
+      </div>
+      <p class="home__default__danger">Total de Descontos</p>
+    </div>
+  </div>
+  <div class="home__content__list">
+    <div class="home__price container">
+      <div class="home__price__value">
+        <i class="fa fa-money home__default__success"></i>{{ totalValue |
+        number:2 || 0}}R$
+      </div>
+      <p class="home__default__success">Total na Conta</p>
+    </div>
+  </div>
+</div>

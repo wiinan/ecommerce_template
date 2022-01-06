@@ -1,0 +1,105 @@
+<div class="address__component" ng-controller="addAddressCtrl">
+  <form>
+    <section class="section__login">
+      <div class="address__container__box">
+        <nav class="navbar">
+          <div class="navbar__container">
+            <a id="navbar__logo"><i class="fa fa-diamond"></i>PcBank</a>
+            <div class="navbar__toggle" id="mobile-menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+              <div>
+                <button class="header__list__button__logged__bank">
+                  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </button>
+              </div>
+            </ul>
+          </div>
+        </nav>
+        <div class="login__box">
+          <h3 class="login__subtitle">Selecionar Metodo de pagamento</h3>
+        </div>
+        <div class="address__section">
+          <div class="login__box__flex">
+            <div class="login__register__box">
+              <select
+                class="register__input-password"
+                id="authPassword"
+                name="singleSelect"
+                id="singleSelect"
+                ng-model="addPayment.type"
+                required
+              >
+                <option
+                  ng-repeat="payment in type_payment"
+                  value="{{payment.value}}"
+                >
+                  {{payment.name}}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="login__box__flex">
+            <div class="login__register__box">
+              <input
+                class="register__input-password"
+                placeholder="Transferir Saldo, Minimo 2000.00$"
+                id="authPassword"
+                type="number"
+                min="2000"
+                ng-model="addPayment.purchasingPower"
+                required
+              />
+            </div>
+          </div>
+          <div class="login__box__flex"></div>
+          <div class="login__box__flex" ng-hide="addPayment.type == 'Pix'">
+            <div class="login__register__box">
+              <input
+                class="register__input-password"
+                placeholder="Numero"
+                id="authPassword"
+                type="text"
+                ng-model="addPayment.number"
+                required
+              />
+            </div>
+          </div>
+          <div class="login__box__flex">
+            <div class="login__register__box">
+              <input
+                class="register__input-password"
+                placeholder="Senha"
+                id="authPassword"
+                type="password"
+                ng-model="addPayment.password"
+                required
+              />
+            </div>
+          </div>
+          <div class="login__box__buttons">
+            <input
+              ng-disabled="!addPayment.type"
+              type="submit"
+              value="Adicionar"
+              class="button-submit"
+              ng-click="addPaymentClick()"
+            />
+          </div>
+
+          <div class="login__box__buttons">
+            <input
+              type="button"
+              value="Cancelar"
+              class="button-submit__secondary"
+              onclick="window.location.href = '#!/cart'"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </form>
+</div>

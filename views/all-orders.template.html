@@ -1,0 +1,69 @@
+<section class="order__section">
+  <div class="order__container">
+    <h1 class="order__title">TODAS AS ORDENS</h1>
+  </div>
+  <div class="order__container__all__info">
+    <table
+      onclick="window.location.href = '#!/car'"
+      class="order__all__info"
+      ng-repeat="order in allValues.ordersInfo"
+    >
+      <tr class="order__info__title__p">
+        <th class="order__title__all__p">Order ID:</th>
+        <th class="order__title__all__txt">{{order.id}}</th>
+      </tr>
+      <tr class="order__info__title__p">
+        <th class="order__title__all__p">Pedidos:</th>
+      </tr>
+      <tr class="order__info__title__p" ng-repeat="product in order.products">
+        <th class="order__title__all__txt__id">{{product.products_id}}</th>
+      </tr>
+      <tr class="order__info__title__p">
+        <th class="order__title__all__p">Preço Total:</th>
+        <th class="order__title__all__txt">
+          {{order.price_total | currency: 'R$'}}
+        </th>
+      </tr>
+      <tr class="order__info__title__p">
+        <th class="order__title__all__p">Status de Pagamento:</th>
+        <th
+          ng-show="order.order.is_paid"
+          style="color: green"
+          class="order__title__all__txt"
+        >
+          Pago
+        </th>
+        <th
+          ng-hide="order.order.is_paid"
+          style="color: red"
+          class="order__title__all__txt"
+        >
+          Não Pago
+        </th>
+      </tr>
+      <tr class="order__info__title__p">
+        <th class="order__title__all__p">Status de Envio:</th>
+        <th
+          class="order__title__all__txt"
+          ng-show="order.order.is_delivered"
+          style="color: green"
+        >
+          {{order.order.is_delivered}}
+        </th>
+        <th
+          class="order__title__all__txt"
+          ng-hide="order.order.is_delivered"
+          style="color: red"
+        >
+          Não Enviado
+        </th>
+      </tr>
+      <tr class="order__info__title__p">
+        <th class="order__title__all__p">Gerado em:</th>
+        <th class="order__title__all__txt">
+          {{order.order.created_at | date:'dd-MM-yyyy HH:mm'}}
+        </th>
+      </tr>
+    </table>
+  </div>
+</section>

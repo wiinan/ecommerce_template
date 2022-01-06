@@ -1,0 +1,55 @@
+<section class="cart__section">
+  <sidebar-component></sidebar-component>
+  <div class="cart__content__items">
+    <div class="cart__p__container">
+      <h1 class="cart__h1">Meus Anuncios</h1>
+    </div>
+    <div class="cart__flex" ng-hide="!announcementDatas.length">
+      <div class="cart__box" ng-repeat="car in announcementDatas">
+        <a ng-href="#!/store/{{car.id}}" class="cart__box__center">
+          <div class="cart__absolute">
+            <button
+              ng-click="removeAnnouncement(car.id)"
+              class="cart__button__deleted"
+            >
+              <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </button>
+          </div>
+          <img
+            ng-hide="!car.image.id"
+            class="cart__image"
+            src="{{car.image.url}}"
+          />
+          <img
+            ng-show="!car.image.url"
+            class="cart__image"
+            src="https://xxwvxg.dm.files.1drv.com/y4p0Ndhdo64d8h9hweKaWXUxNxi9Rlco7_bXoRClc3wIDjc3vBupQoUlXwYIDO8l_EDDyyWsyDF0i1UdK0dq1KyQ0e54TRzi9Iy916B-pI1XUENqll_V-hnORXIrm7eUH7ba33WjNEoYDW5DMA9k_nDfXRLe2MFHW_WMa-JvPJbfo8LQyB6jBRvF0HhYpjAMX8cCdHfKJ7sIRZfti4Tdl4zsb9h0Eixvlp5G4SKQEjeVas/car%20%283%29.png"
+          />
+          <div class="cart__absolute__secondary">
+            <a class="cart__button__update" href="#!/edit/{{car.id}}">
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="cart__infos">
+            <p class="cart__infos__text">Nome: {{car.name}}</p>
+          </div>
+          <div class="cart__infos">
+            <p class="cart__infos__text">Marca: {{car.spec.name}}</p>
+          </div>
+          <div class="cart__infos">
+            <p class="cart__infos__text">Quantidade: {{car.count_in_stock}}</p>
+          </div>
+          <div class="cart__infos">
+            <p class="cart__infos__text">Descrição: {{car.description}}</p>
+          </div>
+          <div class="cart__infos">
+            <p class="cart__price">Preço: {{car.price}} R$</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div ng-show="!announcementDatas.length" class="cart__p__container">
+      <a href="#!/car" class="cart__texth3">Nada anunciado, anunciar carro</a>
+    </div>
+  </div>
+</section>

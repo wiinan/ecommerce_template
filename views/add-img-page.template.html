@@ -1,0 +1,41 @@
+<form>
+  <section class="section__login">
+    <div class="login__container__box">
+      <div class="login__box">
+        <h3 class="login__subtitle">ANUCIAR CARRO</h3>
+      </div>
+
+      <form>
+        <input
+          name="file"
+          class="register__input-password"
+          select-ng-files
+          placeholder="Imagem Url"
+          id="fileTobase64"
+          type="file"
+          ng-model="formCar.img"
+          accept="image/png, image/jpeg"
+          onchange="angular.element(this).scope().encodeImageFileAsURL(this)"
+        />
+
+        <img src="{{formCar.product}}" id="imgTest" />
+      </form>
+
+      <div class="login__box__buttons">
+        <input
+          value="ANUNCIAR"
+          class="button-submit"
+          onclick="window.location.href = '#!/store'"
+        />
+      </div>
+      <div class="login__box__buttons">
+        <input
+          type="button"
+          value="REMOVER"
+          class="button-submit"
+          ng-click="deleteImage()"
+        />
+      </div>
+    </div>
+  </section>
+</form>

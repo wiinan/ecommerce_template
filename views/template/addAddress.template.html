@@ -1,0 +1,86 @@
+<div class="address__component" ng-controller="addAddressCtrl">
+  <form>
+    <section class="section__login">
+      <div class="address__container__box">
+        <div class="login__box">
+          <h3 class="login__subtitle">Adicionar Endereços</h3>
+        </div>
+        <div class="login__box__flex">
+          <div class="login__register__box">
+            <div class="register__box">
+              <input
+                class="register__input-password"
+                placeholder="Nome Completo"
+                id="authPassword"
+                type="text"
+                ng-model="addAddress.fullName"
+                required
+              />
+              <input
+                class="register__input-password"
+                placeholder="Endereço"
+                id="authPassword"
+                type="text"
+                ng-model="addAddress.address"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="login__box__flex">
+          <div class="login__register__box">
+            <div class="register__box">
+              <input
+                class="register__input-password"
+                placeholder="Cidade"
+                id="authPassword"
+                type="text"
+                ng-model="addAddress.city"
+                required
+              />
+              <input
+                class="register__input-password"
+                placeholder="Estado"
+                id="authPassword"
+                type="text"
+                ng-model="addAddress.country"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="login__box__flex">
+          <div class="login__register__box">
+            <div class="address__box">
+              <input
+                class="register__input-password"
+                placeholder="CEP/Codigo Postal XXXXXXXX"
+                id="authPassword"
+                type="text"
+                ng-model="addAddress.postal_code"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="login__box__buttons">
+          <input
+            ng-disabled="!addAddress.fullName || !addAddress.address || !addAddress.city || !addAddress.postal_code || !addAddress.country"
+            type="submit"
+            value="Adicionar"
+            class="button-submit"
+            ng-click="addAddressClick()"
+          />
+        </div>
+        <div class="login__box__buttons">
+          <input
+            type="button"
+            value="Cancelar"
+            class="button-submit__secondary"
+            ng-click="toggleShowAddress()"
+          />
+        </div>
+      </div>
+    </section>
+  </form>
+</div>

@@ -1,0 +1,159 @@
+.sidebar__section {
+  width: 35rem;
+  max-height: calc(100vh - 9rem);
+  position: fixed;
+  right: 3rem;
+  z-index: 777;
+  overflow-y: auto;
+  border-radius: 5px;
+}
+
+.sidebar__p__highlighted {
+  color: white;
+  font-size: 2rem;
+}
+
+.sidebar__input__highlighted {
+}
+
+.sidebar__flex__search {
+  width: 300px;
+  height: 45px;
+  background-color: rgba(204, 8, 171, 0.849);
+  color: white;
+  padding-left: 10px;
+  outline: none;
+  border: 2px solid rgb(131, 129, 131);
+  font-size: 16px;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.sidebar__flex__search::placeholder {
+  color: rgb(194, 194, 194);
+}
+
+.sidebar__flex__search:focus {
+  width: 300px;
+  height: 50px;
+  background-color: rgba(238, 12, 200, 0.849);
+  border: 2px solid rgb(255, 255, 255);
+  font-size: 16px;
+}
+
+.sidebar__p {
+  width: 15ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: white;
+  font-size: 2rem;
+}
+
+.sidebar__list {
+  background-color: rgb(85, 0, 71);
+  width: 35rem;
+  height: auto;
+  right: 3rem;
+}
+
+.sidebar__app {
+  display: flex;
+  color: white;
+}
+
+.sidebar__container {
+  overflow-x: hidden;
+  background-color: #131313;
+  height: 95.5vh;
+  width: 30rem;
+}
+
+.sidebar__btn {
+  display: flex;
+  padding: 10px 20px;
+  cursor: pointer;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.sidebar__btn__default {
+  display: flex;
+  padding: 10px 90px;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid rgb(187, 181, 181);
+  align-items: center;
+  font-size: 1.6rem;
+  background-color: transparent;
+  color: rgb(161, 156, 156);
+  transition: 0.3s;
+}
+.sidebar__btn__default:hover {
+  padding: 10px 90px;
+  cursor: pointer;
+  border: 2px solid white;
+  background-color: rgb(255, 0, 170);
+  color: white;
+}
+
+.sidebar__highlighted {
+  display: flex;
+  padding: 10px 20px;
+  cursor: pointer;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.sidebar__btn--active,
+.sidebar__btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.sidebar__icon {
+  color: white;
+  margin-right: 20px;
+  font-size: 2.5rem;
+}
+
+.icon__red {
+  color: #e91e63;
+}
+
+.sidebar__buttons {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #303030;
+}
+
+.sidebar__p {
+  color: white;
+}
+
+.sidebar__text {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.sidebar__options {
+  background-color: rgba(204, 8, 171, 0.849);
+  color: white;
+  display: flex;
+  padding: 5px 34px;
+  cursor: pointer;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.sidebar__select {
+  background-color: rgba(204, 8, 171, 0.849);
+}
+
+.sidebar__options:checked {
+  background-color: rgba(22, 20, 22, 0.849);
+}
+
+.sidebar__p__minimized{
+  font-size: 1.5rem;
+}

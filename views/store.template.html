@@ -1,0 +1,61 @@
+<section class="store__section">
+  <sidebar-component></sidebar-component>
+  <div class="store__content__items">
+    <div class="store__p__container">
+      <h1 class="store__h1">CATALOGO</h1>
+    </div>
+    <div class="store__container__search">
+      <input
+        placeholder="Pesquisar Carro..."
+        class="store__flex__search"
+        ng-model="searchCar"
+        ng-model-options="{debounce: 1000}"
+      />
+    </div>
+    <div class="store__flex__box">
+      <div
+        class="store__box"
+        ng-repeat="car in allProducts | filter:searchCar | filter:propertyMark | orderBy: propertyName"
+      >
+        <a ng-href="#!/store/{{car.id}}" class="store__box__center">
+          <img
+            ng-hide="!car.image.id"
+            class="store__image"
+            src="{{car.image.url}}"
+          />
+          <img
+            ng-show="!car.image.url"
+            class="store__image"
+            src="https://xxwvxg.dm.files.1drv.com/y4p0Ndhdo64d8h9hweKaWXUxNxi9Rlco7_bXoRClc3wIDjc3vBupQoUlXwYIDO8l_EDDyyWsyDF0i1UdK0dq1KyQ0e54TRzi9Iy916B-pI1XUENqll_V-hnORXIrm7eUH7ba33WjNEoYDW5DMA9k_nDfXRLe2MFHW_WMa-JvPJbfo8LQyB6jBRvF0HhYpjAMX8cCdHfKJ7sIRZfti4Tdl4zsb9h0Eixvlp5G4SKQEjeVas/car%20%283%29.png"
+          />
+          <div class="store__box__content">
+            <div class="store__infos">
+              <p class="store__infos__text">Marca: {{car.spec.name}}</p>
+            </div>
+            <div class="store__infos">
+              <p class="store__infos__text">Nome: {{car.name}}</p>
+            </div>
+            <div class="store__infos">
+              <p class="store__infos__lowercase">Contato: {{car.user.email}}</p>
+            </div>
+            <div class="store__infos">
+              <p class="store__infos__text">
+                Data: {{car.created_at | date:"dd-MM-yyyy"}}
+              </p>
+            </div>
+            <div class="store__infos">
+              <p class="store__price">
+                Preço: {{car.price | currency: 'R$'}} R$
+              </p>
+            </div>
+          </div>
+          <div class="store__add__cart">
+            <button ng-click="addToCart(car.id)" class="store__button__add">
+              <i class="fa fa-cart-plus" aria-hidden="true"></i>
+            </button>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

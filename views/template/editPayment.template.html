@@ -1,0 +1,96 @@
+<div class="address__component" ng-controller="paymentEditCtrl">
+  <form>
+    <section class="section__login">
+      <div class="address__container__box">
+        <nav class="navbar">
+          <div class="navbar__container">
+            <a id="navbar__logo"><i class="fa fa-diamond"></i>PcBank</a>
+            <div class="navbar__toggle" id="mobile-menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+              <div>
+                <button class="header__list__button__logged__bank">
+                  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </button>
+              </div>
+            </ul>
+          </div>
+        </nav>
+        <div class="login__box">
+          <h3 class="login__subtitle">Adicionar Saldo</h3>
+        </div>
+        <div class="address__section">
+          <div class="login__box__flex">
+            <div class="login__register__box">
+              <select
+                class="register__input-password"
+                id="authPassword"
+                name="singleSelect"
+                id="singleSelect"
+                ng-model="editPayment.type"
+                disabled
+              >
+                <option value="{{editPayment.type}}">
+                  {{editPayment.type}}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="login__box__flex">
+            <div class="login__register__box">
+              <input
+                class="register__input-password"
+                placeholder="{{editPayment.number}}"
+                id="authPassword"
+                type="text"
+                ng-model="editPayment.number"
+                disabled
+              />
+            </div>
+          </div>
+          <div class="login__box__flex">
+            <div class="login__register__box">
+              <input
+                class="register__input-password"
+                placeholder="Transferir Saldo, Minimo 2000.00$"
+                id="authPassword"
+                min="2000"
+                type="number"
+                ng-model="editPayment.purchasingPower"
+                required
+              />
+            </div>
+          </div>
+          <div class="login__box__buttons">
+            <input
+              ng-disabled="!editPayment.purchasingPower"
+              type="submit"
+              value="Adicionar"
+              class="button-submit"
+              ng-click="editPaymentClick(editPayment.obj.id)"
+            />
+          </div>
+          <div class="login__box__buttons">
+            <input
+              type="submit"
+              value="Deletar Metodo de Pagamento"
+              class="button-submit__delete"
+              ng-click="deletePaymentClick(editPayment.obj.id)"
+            />
+          </div>
+          <div class="login__box__buttons">
+            <input
+              type="button"
+              value="Cancelar"
+              class="button-submit__secondary"
+              ng-click="location('cart')"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </form>
+</div>

@@ -1,0 +1,60 @@
+<section class="sidebar__section" ng-controller="sideCtrl">
+  <div class="sidebar__list">
+    <div class="sidebar__buttons">
+      <a class="sidebar__btn" ng-click="sortBy('name')">
+        <p class="sidebar__icon">
+          <i class="fa fa-tachometer icon__default"></i>
+        </p>
+        <p class="sidebar__p">Nome do Carro</p>
+      </a>
+      <a class="sidebar__btn" ng-click="sortBy('count_in_stock')">
+        <p class="sidebar__icon">
+          <i class="fa fa-university icon__default"></i>
+        </p>
+        <p class="sidebar__p">Destaques</p>
+      </a>
+      <a class="sidebar__btn" ng-click="sortBy('created_at')">
+        <p class="sidebar__icon"><i class="fa fa-history icon__default"></i></p>
+        <p class="sidebar__p">Recentes</p>
+      </a>
+    </div>
+    <div class="sidebar__highlighted">
+      <div class="sidebar__input__highlighted">
+        <input
+          ng-model-options="{debounce: 500}"
+          placeholder="Pesquisar por Marca..."
+          class="sidebar__flex__search"
+          ng-model="searchSpec.name"
+        />
+      </div>
+    </div>
+    <div class="sidebar__buttons bottom">
+      <a class="sidebar__btn" ui-sref="adm"> <p class="sidebar__icon"></p></a>
+      <a class="sidebar__btn" ng-click="searchMark('')">
+        <p class="sidebar__icon">
+          <i class="icon__default">x</i>
+        </p>
+        <p class="sidebar__p">Remover</p>
+      </a>
+      <a
+        class="sidebar__btn"
+        ng-click="searchMark(spec.name)"
+        ng-repeat="spec in allSpecs | filter:searchSpec | orderBy:'name'"
+      >
+        <p class="sidebar__icon">
+          <i class="fa fa-caret-right icon__default"></i>
+        </p>
+        <p class="sidebar__p">{{spec.name}}</p>
+      </a>
+    </div>
+    <a class="sidebar__btn">
+      <p class="sidebar__p__highlighted">Ver Anuncios</p>
+    </a>
+    <div class="sidebar__buttons bottom">
+      <a class="sidebar__btn" href="#!/my-announcement">
+        <p class="sidebar__icon"><i class="fa fa-sun-o icon__default"></i></p>
+        <p class="sidebar__p">Administração</p>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,98 @@
+<link href="../css/template/header-store.css" rel="stylesheet" />
+<header-component></header-component>
+
+<section class="perfil__section">
+  <div ng-show="globShowPaymentMenu" class="cart__content__items">
+    <add-payment-component></add-payment-component>
+  </div>
+  <div class="perfil__default__container">
+    <div class="perfil__default__space">
+      <i class="fa fa-user-circle" aria-hidden="true"></i>
+      <h2 class="perfil__name">{{profile.name}}</h2>
+    </div>
+  </div>
+  <div ng-click="toggleShowPayment()" class="perfil__default__container">
+    <i class="fa fa-money" aria-hidden="true"></i>
+    <p class="perfil__email">Saldo: {{money}}</p>
+  </div>
+  <a href="#!/allorders" class="perfil__default__container">
+    <div class="perfil__default__space">
+      <i class="fa fa-archive" aria-hidden="true"></i>
+      <h2 class="perfil__name">Ver Ordens de Compras</h2>
+    </div>
+  </a>
+  <div class="perfil__container__flex">
+    <a href="#!/my-announcement" class="perfil__container__announcement">
+      <p class="perfil__name__announcement">
+        <i class="fa fa-car" aria-hidden="true"></i> ANUNCIOS
+      </p>
+      <div class="perfil__repeat">
+        <div class="perfil__announcement__flex">
+          <div
+            class="perfil__announcement__container"
+            ng-repeat="car in announcement"
+            ng-hide="announcement.length === 0"
+          >
+            <img
+              ng-hide="!car.image.id"
+              class="perfil__car__img"
+              src="{{car.image.url}}"
+            />
+            <img
+              ng-show="!car.image.url"
+              class="perfil__car__img"
+              src="https://xxwvxg.dm.files.1drv.com/y4p0Ndhdo64d8h9hweKaWXUxNxi9Rlco7_bXoRClc3wIDjc3vBupQoUlXwYIDO8l_EDDyyWsyDF0i1UdK0dq1KyQ0e54TRzi9Iy916B-pI1XUENqll_V-hnORXIrm7eUH7ba33WjNEoYDW5DMA9k_nDfXRLe2MFHW_WMa-JvPJbfo8LQyB6jBRvF0HhYpjAMX8cCdHfKJ7sIRZfti4Tdl4zsb9h0Eixvlp5G4SKQEjeVas/car%20%283%29.png"
+            />
+            <p class="perfil__name__car">{{car.spec.name}} {{car.name}}</p>
+          </div>
+          <div
+            onclick="window.location.href = '#!/car'"
+            class="perfil__show"
+            ng-show="announcement.length === 0"
+          >
+            <div class="perfil__show__center">
+              <h1>ANUNCIE AQUI</h1>
+              <p>NADA ANUNCIADO</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="#!/cart" class="perfil__container__announcement">
+      <p class="perfil__name__announcement">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i> CARRINHO
+      </p>
+      <div class="perfil__repeat">
+        <div class="perfil__announcement__flex">
+          <div
+            ng-hide="cartDatas.length === 0"
+            class="perfil__announcement__container"
+            ng-repeat="cart in cartDatas"
+          >
+            <img
+              ng-hide="!cart.product.image.url"
+              class="perfil__car__img"
+              src="{{cart.product.image.url}}"
+            />
+            <img
+              ng-show="!cart.product.image.url"
+              class="perfil__car__img"
+              src="https://xxwvxg.dm.files.1drv.com/y4p0Ndhdo64d8h9hweKaWXUxNxi9Rlco7_bXoRClc3wIDjc3vBupQoUlXwYIDO8l_EDDyyWsyDF0i1UdK0dq1KyQ0e54TRzi9Iy916B-pI1XUENqll_V-hnORXIrm7eUH7ba33WjNEoYDW5DMA9k_nDfXRLe2MFHW_WMa-JvPJbfo8LQyB6jBRvF0HhYpjAMX8cCdHfKJ7sIRZfti4Tdl4zsb9h0Eixvlp5G4SKQEjeVas/car%20%283%29.png"
+            />
+            <p class="perfil__name__car">{{cart.product.name}}</p>
+          </div>
+          <div
+            onclick="window.location.href = '#!/store'"
+            class="perfil__show"
+            ng-show="cartDatas.length === 0"
+          >
+            <div class="perfil__show__center">
+              <h1>CARRINHO VAZIO</h1>
+              <p>VISITAR LOJA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>

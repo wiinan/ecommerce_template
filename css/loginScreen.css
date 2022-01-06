@@ -1,0 +1,241 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section__login {
+  height: 9em;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding-top: 40rem;
+}
+
+.validate {
+  width: 380px;
+  position: relative;
+}
+
+.login__container__box {
+  position: relative;
+  width: 1500px;
+  height: 700px;
+  background-color: rgb(39, 39, 39);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.login__container__box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.075);
+  pointer-events: none;
+  transform: skewX(-15deg);
+}
+
+.validate span {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  padding: 5px;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+.validate span i {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.validate {
+  width: 1000px;
+}
+
+.input-email {
+  padding: 20px;
+  width: 1000px;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #000;
+}
+
+.input-password {
+  padding: 20px;
+  width: 1000px;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #000;
+}
+
+.register__input-password {
+  padding: 20px;
+  width: 900px;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #000;
+  margin-left: 3rem;
+}
+
+.input-email::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.login__box__flex {
+  display: flex;
+}
+
+.login__box {
+  height: 9em;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.login__register__box {
+  height: 8em;
+  align-items: center;
+  margin-left: 22rem;
+}
+
+.register__box {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.login__box__buttons {
+  height: 5em;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.button-submit__secondary {
+  padding: 12px 46rem;
+  font-size: 2rem;
+  background-color: transparent;
+  color: rgb(199, 43, 199);
+  border: 3px solid rgb(199, 43, 199);
+  z-index: 888;
+  border-radius: 5px;
+  display: block;
+  transition: 0.3s;
+}
+
+.button-submit__secondary:hover {
+  background-color: rgb(199, 43, 199);
+  color: rgb(255, 255, 255);
+  border: 3px solid rgb(199, 43, 199);
+  display: block;
+}
+
+.button-submit__delete {
+  padding: 12px 36rem;
+  font-size: 2rem;
+  background-color: transparent;
+  color: red;
+  border: 3px solid red;
+  z-index: 888;
+  border-radius: 5px;
+  display: block;
+  transition: 0.3s;
+}
+
+.button-submit__delete:hover {
+  background-color: red;
+  color: rgb(255, 255, 255);
+  border: 3px solid red;
+  display: block;
+}
+
+.button-submit__secondary__edit {
+  padding: 10px 49rem;
+  font-size: 2rem;
+  background-color: transparent;
+  color: rgb(199, 43, 199);
+  border: 3px solid rgb(199, 43, 199);
+  z-index: 888;
+  border-radius: 5px;
+  display: block;
+  transition: 0.3s;
+}
+
+.button-submit__secondary__edit:hover {
+  background-color: rgb(199, 43, 199);
+  color: rgb(255, 255, 255);
+  border: 3px solid rgb(199, 43, 199);
+  display: block;
+}
+
+.button-submit {
+  cursor: pointer;
+  border: none;
+  padding: 12px 47rem;
+  font-size: 2rem;
+  background-color: rgb(199, 43, 199);
+  color: white;
+  z-index: 888;
+  border-radius: 5px;
+  display: block;
+  transition: 0.3s;
+}
+
+.button-submit:hover {
+  background-color: rgb(143, 35, 143);
+  display: block;
+}
+
+.login__title {
+  color: white;
+  font-size: 8rem;
+}
+
+.login__subtitle {
+  color: white;
+  font-size: 5rem;
+}
+
+.login__link__p {
+  color: white;
+  font-size: 2rem;
+}
+
+.link-submit {
+  color: rgb(199, 43, 199);
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+
+.link-google {
+  margin-left: 7rem;
+}

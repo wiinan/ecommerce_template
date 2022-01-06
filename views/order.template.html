@@ -1,0 +1,68 @@
+<link href="../css/template/header-store.css" rel="stylesheet" />
+
+<header-component></header-component>
+<section class="order__section">
+  <div class="order__container">
+    <div ng-show="globShowPaymentMenu" class="cart__content__items">
+      <add-payment-component></add-payment-component>
+    </div>
+    <h1 class="order__title">FINALIZAR COMPRA</h1>
+  </div>
+  <div class="order__container__info">
+    <div class="order__info__center">
+      <h2 class="order__title__h2">RESUMO DA COMPRA E INFORMAÇÕES</h2>
+    </div>
+    <table class="order__info">
+      <tr class="order__info__title__p">
+        <th class="order__title__p">Nome Completo:</th>
+        <th class="order__title__txt">{{allValues.userInfo.fullname}}</th>
+      </tr>
+      <tr class="order__info__title__p">
+        <th class="order__title__p">Endereço:</th>
+        <th class="order__title__txt">
+          {{allValues.userInfo.address}}, {{allValues.userInfo.city}}
+        </th>
+      </tr>
+      <tr class="order__info__title__p">
+        <th class="order__title__p">CEP:</th>
+        <th class="order__title__txt">
+          {{allValues.userInfo.postal_code}}, {{allValues.userInfo.country}}
+        </th>
+      </tr>
+      <tr class="order__info__title__p">
+        <th class="order__title__p">Metodo de Pagamento:</th>
+        <th class="order__title__txt">{{allValues.paymentInfo.type}}</th>
+      </tr>
+    </table>
+    <table class="order__info">
+      <tr class="order__info__title__p">
+        <th class="order__title__p">Nome do Carro</th>
+        <th class="order__title__p">Marca</th>
+        <th class="order__title__p">Preço</th>
+        <th class="order__title__p">Quantidade</th>
+      </tr>
+      <tr ng-repeat="car in allValues.cartInfo">
+        <td class="order__title__txt">{{car.product.name}}</td>
+        <td class="order__title__txt">{{car.product.description}}</td>
+        <td class="order__title__txt">
+          {{car.product.price | currency: 'R$'}}
+        </td>
+        <td class="order__title__txt">{{car.quantity}}</td>
+      </tr>
+    </table>
+    <div class="order__footer">
+      <h2 class="order__title__h2">
+        Preço Total: {{allValues.totalOrderPrice}}
+      </h2>
+      <button ng-click="ConfirmOrder()" class="order__button">
+        CONFIRMAR COMPRA
+      </button>
+    </div>
+    <div class="order__footer" ng-hide="!poketError">
+      <p class="order__error">
+        O saldo não é suficiente para esta compra!
+        <a class="order__link__pointer" ng-click="toggleShowPayment()">Adicionar Creditos</a>
+      </p>
+    </div>
+  </div>
+</section>

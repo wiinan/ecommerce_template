@@ -1,0 +1,90 @@
+<section class="sidebar__section">
+  <div class="sidebar__list" ng-controller="sideCtrl">
+    <div class="sidebar__buttons">
+      <a class="sidebar__btn" ui-sref="dashboard">
+        <p class="sidebar__icon">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </p>
+        <p class="sidebar__p">FINALIZAR PEDIDO</p>
+      </a>
+    </div>
+    <div class="sidebar__highlighted"></div>
+    <div class="sidebar__buttons bottom">
+      <a class="sidebar__btn" ui-sref="adm">
+        <p class="sidebar__icon">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </p>
+        <p class="sidebar__p">ENDEREÇOS</p>
+      </a>
+
+      <select
+        class="sidebar__select"
+        name="ngvalueselect"
+        ng-model="allDefault.addressSelected"
+        multiple
+      >
+        <option
+          class="sidebar__options"
+          ng-repeat="option in addressInfo"
+          value="{{option.id}}"
+        >
+          {{option.address}}, {{option.city}}
+        </option>
+      </select>
+      <a class="sidebar__btn" ng-click="toggleShowAddress()">
+        <p class="sidebar__icon">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </p>
+        <p class="sidebar__p">NOVO ENDEREÇO</p>
+      </a>
+    </div>
+
+    <div class="sidebar__buttons bottom">
+      <a class="sidebar__btn" ui-sref="adm">
+        <p class="sidebar__icon">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </p>
+        <p class="sidebar__p">Pagamento</p>
+      </a>
+      <select
+        class="sidebar__select"
+        name="ngvalueselect"
+        ng-model="allDefault.paymentMethod"
+        multiple
+      >
+        <option
+          ng-dblclick="otherLink(method.id)"
+          class="sidebar__options"
+          ng-repeat="method in methodInfo"
+          value="{{method.id}}"
+        >
+          {{method.type}}
+        </option>
+      </select>
+      <a class="sidebar__btn" ng-click="toggleShowPayment()">
+        <p class="sidebar__icon">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </p>
+        <p class="sidebar__p">Metodo de Pagamento</p>
+      </a>
+    </div>
+    <a class="sidebar__btn" ui-sref="adm">
+      <p class="sidebar__icon">
+        <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+      </p>
+      <p class="sidebar__p">VALOR TOTAL</p>
+    </a>
+    <a class="sidebar__btn">
+      <p class="sidebar__icon"><i class="fa fa-money icon__default"></i></p>
+      <p class="sidebar__p">{{allDefault.totalValue | currency:'R$'}}</p>
+    </a>
+    <a class="sidebar__btn" ui-sref="adm">
+      <button
+        class="sidebar__btn__default"
+        ng-click="addAddressClick(allDefault.addressSelected, allDefault.paymentMethod)"
+      >
+        FAZER PEDIDO <i class="fa fa-check-square-o" aria-hidden="true"></i>
+      </button>
+    </a>
+  </div>
+</section>
