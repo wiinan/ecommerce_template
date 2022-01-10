@@ -26,6 +26,8 @@ function AddCarController($scope, car, msgs, $routeParams, $window) {
     getCar();
   };
 
+  const purify = (value) => DOMPurify.sanitize(value);
+
   $scope.location = function (url) {
     $window.location.href = url;
   };
@@ -36,12 +38,12 @@ function AddCarController($scope, car, msgs, $routeParams, $window) {
     car.send(
       "product",
       {
-        name: $scope.formCar.name,
-        spec_id: $scope.formCar.spec_id,
-        rating: $scope.formCar.rating,
-        count_in_stock: $scope.formCar.count_in_stock,
-        description: $scope.formCar.description,
-        price: $scope.formCar.price,
+        name: purify($scope.formCar.name),
+        spec_id: purify($scope.formCar.spec_id),
+        rating: purify($scope.formCar.rating),
+        count_in_stock: purify($scope.formCar.count_in_stock),
+        description: purify($scope.formCar.description),
+        price: purify($scope.formCar.price),
       },
       (err) => msgs.addError(err)
     );
